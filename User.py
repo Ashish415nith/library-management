@@ -18,7 +18,7 @@ class Member(User):
     @classmethod
     def addMemberList(cls, member):
         cls.members_list.append(member)
-        
+
     def search_by_book_name(self, title):
         Catalog.search_by_book_name(title)
 
@@ -73,7 +73,7 @@ class Librarian(User):
         for member in Member.members_list:
             if member.name == name:
                 Member.members_list.remove(member)
-                print("{} was successfully removed from the library!".format(name))
+                print("{} removed from the library!".format(name))
                 break
         else:
             print("No member exists by this name")

@@ -11,7 +11,7 @@ class issueandreturn:
                 Catalog.add_to_issue_list(book_item)
                 return book_item
         else:
-            print(f"{book_title} is currently not available in the library")
+            print(f"{book_title} is not present in the library")
 
     def return_book(return_book_item):
         for book in Catalog.books_list:

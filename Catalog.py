@@ -18,14 +18,14 @@ class Catalog:
         for book in Catalog.books_list:
             if book.title == title:
                 Book.add_book_item(book, isbn, rack)
-                print("Book added")
+                print("Book has been added to inventory")
 
     def remove_book(re_book):
         for book in Catalog.books_list:
             if book.title == re_book:
                 Catalog.books_list.remove(book)
                 Catalog.different_book_count -= 1
-                print("Book removed")
+                print("Book has been removed from the inventory")
 
     def remove_book_item(re_item):
         for book in Catalog.books_list:
@@ -33,7 +33,7 @@ class Catalog:
                 if book_item.isbn == re_item:
                     book.book_item.remove(book_item)
                     book.total_count -= 1
-                    print("Book item removed")
+                    print("Book item removed from the inventory")
 
     def search_by_book_name(title):
         for book in Catalog.books_list:
@@ -41,7 +41,7 @@ class Catalog:
                 print(f"{book.title} is available!")
                 break
         else:
-            print(f"Sorry {title} is currently not available")
+            print(f" {title} is currently not available")
 
     def search_by_author_name(author):
         count = 0
@@ -50,7 +50,7 @@ class Catalog:
                 print(book.title)
                 count += 1
         if count == 0:
-            print(f"Sorry , books written by {author} is not available")
+            print(f" The {author} is not available")
 
     def display_all_books(self):
         c = 0
